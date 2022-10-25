@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -9,7 +11,8 @@ public class Main {
         int age11 = 16;
         if (age11 >= 18) {
             System.out.println("Поздравляю, теперь ты взрослый! Пора платить налоги и идти в армию");
-        }else {
+        }
+        if (age11<18) {
             System.out.println("Ты еще совсем кроха, копи деньги на военник");
         }
 
@@ -26,13 +29,13 @@ public class Main {
             System.out.println("Ты - школьник, а матиматичка - сука");
         }
         if (age12 >= 18 && age12 < 24) {
-            System.out.println("Ты - судент. Почти тоже самое, что школьник, но теперь тебе продают пиво");
+            System.out.println("Ты - студент. Почти тоже самое, что школьник, но теперь тебе продают пиво");
         }
         if (age12 >= 24 && age12<30) {
             System.out.println("Пора искать работу, дружочек. Ты думал матиматичка - сука, ты еще не знаком с твоим новым боссом");
         }
         if (age12 >= 30) {
-            System.out.println("Эх, сейчас бы ковырять палкой муровейник");
+            System.out.println("Эх, сейчас бы ковырять палкой муравейник");
         }
 
         System.out.println("Exercise 1.3");
@@ -40,18 +43,128 @@ public class Main {
         //Вагон рассчитан на 60 сидячих мест, все остальные – стоячие.
         //Напишите программу, которая выводит в консоль сообщение о том, есть ли место в вагоне:
         //сидячее или стоячее или вагон уже полностью забит.
-        int trainCampacity1 = 102;
-        int sitplaces1 = 60;
-        int standPlaces1 = trainCampacity1 - sitplaces1;
-        int occupiedPlaces1 = 7;
-        if (occupiedPlaces1 < sitplaces1) {
-            System.out.println("В вагоне " + (sitplaces1 - occupiedPlaces1) + " сидячих мест и " + standPlaces1 + " стоячих мест");
+        int trainCapacity1 = 102;
+        int sitPlaces1 = 60;
+        int standPlaces1 = trainCapacity1 - sitPlaces1;
+        int occupiedPlaces1 = 20;
+        if (occupiedPlaces1 < sitPlaces1) {
+            System.out.println("В вагоне " + (sitPlaces1 - occupiedPlaces1) + " сидячих мест и " + standPlaces1 + " стоячих мест");
         }
-        if (occupiedPlaces1>=sitplaces1 && occupiedPlaces1<trainCampacity1){
-            System.out.println("В вагоне осталось только " + (trainCampacity1 - occupiedPlaces1) + " стоячих мест");
+        if (occupiedPlaces1>=sitPlaces1 && occupiedPlaces1<trainCapacity1){
+            System.out.println("В вагоне осталось только " + (trainCapacity1 - occupiedPlaces1) + " стоячих мест");
         }
-        if (occupiedPlaces1>=trainCampacity1){
+        if (occupiedPlaces1>=trainCapacity1){
             System.out.println("Свободных мест нет");
         }
-    }
+
+        System.out.println("Условный оператор else");
+        System.out.println("Exercise 2.1");
+        //С помощью условного оператора напишите программу, которая выводит в консоль:
+        //поздравление пользователя с совершеннолетием, если ему равно или больше 18 лет;
+        //информационное сообщение, что возраст совершеннолетия ещё не наступил, и нужно немного подождать.
+        int age21 = 19;
+        if (age21 >= 18) {
+            System.out.println("Поздравляю, теперь ты взрослый! Пора платить налоги и идти в армию");
+        }else {
+            System.out.println("Ты еще совсем кроха, копи деньги на военник");
+        }
+
+        System.out.println("Exercise 2.2");
+        //Напишите программу, которая выводит в консоль сообщение о том, что:
+        //ребенок ходит в школу, если его возраст равен или больше 7 годам
+        //человек уже закончил школу и может отправляться в университет, если его возраст 18 и больше;
+        //человек окончил университет и ему пора искать первую работу, если ему 24 и больше лет.
+        int age22 = 31;
+        if (age22 <= 6) {
+            System.out.println("Ты в садике - лафа! В обед спишь, вокруг друзья, ковыряешь палкой муравейник");
+        } else {
+        if (age22 >= 7 && age22 <= 18) {
+            System.out.println("Ты - школьник, а матиматичка - сука");
+        } else {
+        if (age22 > 18 && age22 < 24) {
+            System.out.println("Ты - студент. Почти тоже самое, что школьник, но теперь тебе продают пиво");
+        } else {
+        if (age22 >= 24 && age22<30) {
+            System.out.println("Пора искать работу, дружочек. Ты думал матиматичка - сука, ты еще не знаком с твоим новым боссом");
+        } else {
+            System.out.println("Эх, сейчас бы ковырять палкой муравейник");
+        }}}}
+
+        System.out.println("Exercise 2.3");
+        //Вместимость одного вагона поезда составляет 102 человека.
+        //Вагон рассчитан на 60 сидячих мест, все остальные – стоячие.
+        //Напишите программу, которая выводит в консоль сообщение о том, есть ли место в вагоне:
+        //сидячее или стоячее или вагон уже полностью забит.
+        int trainCapacity2 = 102;
+        int sitPlaces2 = 60;
+        int standPlaces2 = trainCapacity2 - sitPlaces2;
+        int occupiedPlaces2 = 102;
+        if (occupiedPlaces2 < sitPlaces2) {
+            System.out.println("В вагоне " + (sitPlaces2 - occupiedPlaces2) + " сидячих мест и " + standPlaces2 + " стоячих мест");
+        } else {
+        if (occupiedPlaces2>=sitPlaces2 && occupiedPlaces2<trainCapacity2){
+            System.out.println("В вагоне осталось только " + (trainCapacity2 - occupiedPlaces2) + " стоячих мест");
+        } else {
+            System.out.println("Свободных мест нет");
+        }}
+
+        System.out.println("Условный оператор. Операции сравнения");
+        System.out.println("Exercise 3.1");
+        //Если человеку от 2 до 6 лет, то ему нужно ходить в детский сад;
+        //Если человек от 7 до 18 лет, то ему нужно ходить в школу;
+        //Если человеку больше 18 лет, но меньше 24, то его место в университете;
+        //А если человеку больше 24, то ему пора ходить на работу
+        //При выполнении каждого условия программа должна выводить в консоль сообщение в формате :
+        // "Если возраст человека равен … , то ему нужно ходить … (в зависимости от возраста дописать нужное)"
+        int age31 = 12;
+        boolean goToKindergarten = age31>=2 && age31<=6;
+        boolean goToSchool = age31>=7 && age31<=18;
+        boolean goToUniversity = age31>18 && age31<=24;
+        if (goToKindergarten){
+            System.out.println("Если человеку " + age31 + ", то ему нужно ходить в детский сад");
+        }else {
+            if (goToSchool){
+                System.out.println("Если человеку "+ age31 + ", то ему нужно ходить в школу");
+            }else {
+                if (goToUniversity){
+                    System.out.println("Если человеку "+ age31 +", то его место в университете");
+                }else {
+                        System.out.println("Если человеку " + age31 + ", то ему нужно ходить на работу");
+                }
+            }
+        }
+        System.out.println("Exercise 3.2");
+        //Как правило, на аттракционах действуют ограничения и для детей по возрасту:
+        //Если ребенку меньше 5 лет, то он не может кататься на аттракционе.
+        //Если ребенку больше 5, но меньше 14 лет, то он может кататься только в сопровождении взрослого.
+        //Если взрослого нет, то кататься нельзя.
+        //Если ребенок старше 14 лет, то он может кататься без сопровождения взрослого.
+        //Напишите программу, которая выводит в консоль сообщение о том, можно ли ребенку кататься одному
+        // или в сопровождении взрослого в зависимости от того, сколько ему лет.
+        int age32 = 15;
+        boolean baby = age32<5;
+        boolean child = age32>=5 && age32<14;
+                if (baby) {
+            System.out.println("Ты еще мал, дружочек, приходи когда подрастешь");
+        }else {
+            if (child){
+                System.out.println("Вперед, но только с мамкой");
+            }else {
+                    System.out.println("Вон какой вымахал, вперед на карусель");
+            }
+        }
+        System.out.println("Exercise 3.3");
+        int one = 6;
+        int two = 8;
+        int three = 14;
+        if (one>two && one>three){
+            System.out.println(one);
+        }else {
+            if (two>one && two>three){
+                System.out.println(two);
+            }else {
+                System.out.println(three);
+            }
+        }
+     }
 }
